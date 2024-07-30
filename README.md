@@ -72,13 +72,14 @@ basic-app/
 - Flow: check cookies -> input credentials -> generate authentication token -> save authentication token in cookies -> route user to requested page
 - protected routes can now check cookies
 - I will save credentials (f.e. login credentials) to a `.env` file, that I will push to GitHub unencrypted for this assignment, as security is not tested by the assignment.
-- Logging out (by pressing a button in the nav-bar) should clear the session data (authentication state and tokens) and redirect users to the homepage)
+- Logging out (by pressing a button in the nav-bar) should clear the session data (authentication state and tokens) and redirect users to the homepage
 #### 6. Testing
 I want to setup a testing framework to test the features of the application, using `@testing-library/jest-dom`.
 #### 7. Steps:
 - [x] make the navbar component
-- [ ] make the 3 pages
-- [ ] setup authentication
+- [x] make the 3 pages
+- [x] setup authentication
 - [ ] setup testing
 ### Thoughts along the way
 - I'm actually going to use `yarn create react-app basic-app --template typescript` so I have `.tsx` files from the start.
+- I decided to not make a ProtectedRoute component, it takes too much time for this assignment, so I will manually check the authentication status on pages and redirect the user
