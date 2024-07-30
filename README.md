@@ -25,7 +25,7 @@ To summarize, these are all the pages that should be accessible:
 	- Consisting of a form to fill in username and password and a submit button
 	- If login fails, user should get an error message and stay on the page
 	- If login succeeds, user should get a success message and user should be routed to requested page
-It would be nice to have a navigation bar, as it is a quick and intuitive way for users to be able to access `/dashboard` from `/home` and the other way around, etc. I first want to make a navigation bar, so I can quickly make some all three pages.
+It would be nice to have a navigation bar, as it is a quick and intuitive way for users to be able to access `/dashboard` from `/home` and the other way around, etc. I first want to make a navigation bar, so I can quickly make all three pages.
 Any errors I will display by using Reacts' `toasts` so that I can easily give notifications back to the user on successes or failures.
 #### 3. Technology stack
 - yarn
@@ -76,7 +76,7 @@ basic-app/
 #### 6. Testing
 I want to setup a testing framework to test the features of the application, using `@testing-library/jest-dom`.
 #### 7. Steps:
-- [ ] make the navbar component
+- [x] make the navbar component
 - [ ] make the 3 pages
 - [ ] setup authentication
 - [ ] setup testing
