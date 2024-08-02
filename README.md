@@ -83,3 +83,4 @@ I want to setup a testing framework to test the features of the application, usi
 ### Thoughts along the way
 - I'm actually going to use `yarn create react-app basic-app --template typescript` so I have `.tsx` files from the start.
 - I decided to not make a ProtectedRoute component, it takes too much time for this assignment, so I will manually check the authentication status on pages and redirect the user
+- It probably would've been better if I had set up testing upfront, so that I didn't have to test the pages manually during development. I will not add it for now considering time constraints for this assignment

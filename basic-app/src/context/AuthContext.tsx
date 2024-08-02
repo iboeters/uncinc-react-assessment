@@ -2,6 +2,7 @@ import React, { createContext, useState, useContext, ReactNode } from 'react';
 import Cookies from 'js-cookie';
 import { useEffect } from 'react';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 // the context values to be used
 interface AuthContextType {
@@ -18,6 +19,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     const cred_password = process.env.REACT_APP_PASSWORD;
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const token = process.env.REACT_APP_TOKEN as string;
+    const navigate = useNavigate();
 
     const login = async (username: string, password: string) => {
         console.log("authContext login called");
@@ -26,6 +28,8 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             Cookies.set('authToken', token, { expires: 1 });
             setIsAuthenticated(true);
             toast.success('Login successful');
+            // go to page last visited by the user
+            navigate(-1);
         }
         else {
             toast.error('Login credentials invalid');
